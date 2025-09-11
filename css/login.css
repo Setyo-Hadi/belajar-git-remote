@@ -1,59 +1,74 @@
-*{
-    margin:0px;
-    padding:0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-     background-color:#f1f1f1;
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: clamp(14px, 1vw + 0.5rem, 18px); /* fluid base font */
+    transition: font-size 0.3s ease;
 }
 
-.container-login{
-    background-color: #ffff;
-    width: 30%;
-    height: 28rem;
-    position: absolute;
-    left:32rem;
-    top:6rem;
-    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
-    padding:25px;
-    border-radius: 3px;
+.container-login {
+    background-color: #fff;
+    width: clamp(90%, 50%, 30%); /* otomatis menyesuaikan */
+    max-width: 450px;
+    min-width: 280px;
+    height: auto;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: clamp(15px, 2vw, 30px); /* fluid padding */
+    border-radius: 5px;
+    transition: width 0.3s ease, padding 0.3s ease;
 }
 
-.container-login .title-login{
+.container-login .title-login {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: capitalize;
     display: inline-block;
-    margin-bottom:39px;
+    margin-bottom: clamp(20px, 3vw, 40px); /* fluid spacing */
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    transition: font-size 0.3s ease, margin-bottom 0.3s ease;
 }
 
-.container-login .title-login::first-letter{
-    font-size: 2em;
+.container-login .title-login::first-letter {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-.container-login form{
+.container-login form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap:30px;
+    gap: clamp(15px, 2vw, 25px); /* fluid gap */
+    transition: gap 0.3s ease;
 }
 
-.container-login input{
-    padding:5px;
-    outline:none;
+.container-login input {
+    padding: clamp(8px, 1vw, 16px);
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: clamp(0.9rem, 1vw, 1.2rem);
+    transition: font-size 0.3s ease, padding 0.3s ease;
 }
 
-.container-login button{
-    font-size: 15px;
+.container-login button {
+    font-size: clamp(0.9rem, 1vw, 1.2rem);
     background-color: #e2e2e2;
-    padding:20px;
-    outline:none;
+    padding: clamp(12px, 1.5vw, 18px);
+    outline: none;
     border: none;
     cursor: pointer;
     text-transform: capitalize;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, font-size 0.3s ease, padding 0.3s ease;
+    border-radius: 3px;
 }
 
-.container-login button:hover{
+.container-login button:hover {
     box-shadow: 8px 10px 0px #000;
 }
