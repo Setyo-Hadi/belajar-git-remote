@@ -8,7 +8,7 @@ body{
     background-color:#f1f1f1;
 }
 
-.container-form{
+.container-form-registrasi{
     background-color: #ffff;
     width: 30%;
     height: 34rem;
@@ -20,30 +20,30 @@ body{
     border-radius: 3px;
 }
 
-.container-form .title-registrasi{
+.container-form-registrasi .title-registrasi{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: capitalize;
     display: inline-block;
     margin-bottom:39px;
 }
 
-.container-form .title-registrasi::first-letter{
+.container-form-registrasi .title-registrasi::first-letter{
     font-size: 2em;
 }
 
-.container-form form{
+.container-form-registrasi form{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap:30px;
 }
 
-.container-form input{
+.container-form-registrasi input{
     padding:5px;
     outline:none;
 }
 
-.container-form button{
+.container-form-registrasi button{
     font-size: 15px;
     background-color: #e2e2e2;
     padding:20px;
@@ -54,6 +54,6 @@ body{
     transition: box-shadow 0.3s ease;
 }
 
-.container-form button:hover{
+.container-form-registrasi button:hover{
     box-shadow: 8px 10px 0px #000;
 }
