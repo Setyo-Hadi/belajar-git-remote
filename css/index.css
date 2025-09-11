@@ -7,3 +7,64 @@
 body{
     background-color: #f1f1f1;
 }
+
+header{
+    background-color: rgb(40, 39, 39);
+    color:#ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+}
+
+.logo{
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navigasi-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+.navigasi-menu .menu1{
+    list-style: none;
+}
+
+.navigasi-menu .menu1 li{
+    float: left;
+    padding:12px;
+}
+
+.navigasi-menu .menu1 li a{
+    text-decoration: none;
+    color:#fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+.navigasi-menu .menu2{
+    list-style: none;
+    display: inline-flex;
+    gap:10px;
+}
+
+.navigasi-menu .menu2 li{
+    float: left;
+}
+
+.navigasi-menu .menu2 li a{
+    text-decoration: none;
+    color:rgb(40, 39, 39);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    background-color:#fff;
+    padding: 18px 14px;
+    text-transform: capitalize;
+    border-radius: 3px;
+
+}
+
+
