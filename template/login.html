@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/css/login.css">
+    <script src="/libs/repo-submodule/scripts/script.js"></script>
 </head>
 <body>
     <div class="container-login">
@@ -22,7 +23,7 @@
         
         inputs.forEach(input => {
             input.oninput = (e) => {
-                if(e.target.value.length >= 3){
+                if(cekLengthInput(e.target.value.length)){
                     input.style.border = '1px solid #ccc';
                     input.style.color = 'black';
                 }else{
