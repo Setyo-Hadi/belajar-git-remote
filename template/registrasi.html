@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrasi</title>
     <link rel="stylesheet" href="/css/registrasi.css">
+    <script src="/libs/repo-submodule//scripts/script.js"></script>
 </head>
 <body>
     <div class="container-form-registrasi">
@@ -27,7 +28,7 @@
         //event untuk mengecek jumlah karater input yang dimasukan oleh user
         inputs.forEach(input => {
             input.oninput = (e) => {
-                if(e.target.value.length >= 3){
+                if(cekLengthInput(e.target.value.length)){
                     input.style.border = '1px solid #ccc';
                     input.style.color = 'black';
                 }else{
@@ -48,7 +49,7 @@
         };
         //event untuk mengecek ketika user pada confirmasi password apakah sama denga ketika user di password
         confirmasiPassword.addEventListener('keyup',(e) => {
-            if(password.value === e.target.value){
+            if(inputPasswordDanConfirmasiPasswordSama(password.value,e.target.value)){
                 confirmasiPassword.style.color = 'black';
                 confirmasiPassword.style.border = '1px solid #ccc';
             }else{
@@ -58,7 +59,7 @@
         });
         //event jika di click pada input confirmasi password jika tidak sama dengan password maka border,color merah
         confirmasiPassword.addEventListener('click',() => {
-            if(password.value === confirmasiPassword.value){
+            if(inputPasswordDanConfirmasiPasswordSama(password.value,confirmasiPassword.value)){
                 confirmasiPassword.style.color = 'black';
                 confirmasiPassword.style.border = '1px solid #ccc';
             }else{
