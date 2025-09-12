@@ -1,0 +1,3 @@
+[submodule "libs/repo-submodule"]
+	path = libs/repo-submodule
+	url = git@github.com:Setyo-Hadi/belajar-git-remote.git
