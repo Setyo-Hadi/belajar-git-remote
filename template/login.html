@@ -11,10 +11,37 @@
         <h1 class="title-login">login</h1>
         <form action="#">
             <input type="text" name="username" id="username" placeholder="username">
-            <input type="email" name="email" id="email" placeholder="email">
+            <input type="email" name="email" id="email" placeholder="email" required>
             <input type="text" name="password" id="password" placeholder="password">
             <button type="button">login</button>
         </form>
     </div>
+    <script>
+        const inputs = document.querySelectorAll('input');
+        const email = document.getElementById('email');
+        
+        inputs.forEach(input => {
+            input.oninput = (e) => {
+                if(e.target.value.length >= 3){
+                    input.style.border = '1px solid #ccc';
+                    input.style.color = 'black';
+                }else{
+                    input.style.border = '1px solid red';
+                    input.style.color = 'red';
+                }
+            }
+        });
+
+        email.addEventListener('input',() => {
+            if(email.validity.valid){
+                email.style.border = '1px solid #ccc';
+                email.style.color = 'black';
+            }else{
+                email.style.border = '1px solid red';
+                email.style.color = 'red';
+            }
+        });
+    </script>
+>>>>>>> fitur-login
 </body>
 </html>
