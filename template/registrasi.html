@@ -12,11 +12,62 @@
         <form action="#">
             <input type="text" name="fristName" id="fristName" placeholder="fristName">
             <input type="text" name="lastName" id="lastName" placeholder="lastName">
-            <input type="email" name="email" id="email" placeholder="email">
+            <input type="email" name="email" id="email" placeholder="email" required>
             <input type="text" name="password" id="password" placeholder="password">
             <input type="text" name="confirmasi-password" id="confirmasi-password" placeholder="confirmasi password">
             <button type="button">registrasi</button>
         </form>
     </div>
+    <script>
+        const inputs = document.querySelectorAll('input');
+        const email = document.getElementById('email');
+        const confirmasiPassword = document.getElementById('confirmasi-password');
+        const password = document.getElementById('password');
+
+        //event untuk mengecek jumlah karater input yang dimasukan oleh user
+        inputs.forEach(input => {
+            input.oninput = (e) => {
+                if(e.target.value.length >= 3){
+                    input.style.border = '1px solid #ccc';
+                    input.style.color = 'black';
+                }else{
+                    input.style.border = '1px solid red';
+                    input.style.color = 'red';
+                }
+            };
+        });
+        //event validasi email
+        email.oninput = () => {
+            if(email.validity.valid){
+                email.style.border = '1px solid #ccc';
+                email.style.color = 'black';
+            }else{
+                email.style.border = '1px solid red';
+                email.style.color =  'red';
+            }
+        };
+        //event untuk mengecek ketika user pada confirmasi password apakah sama denga ketika user di password
+        confirmasiPassword.addEventListener('keyup',(e) => {
+            if(password.value === e.target.value){
+                confirmasiPassword.style.color = 'black';
+                confirmasiPassword.style.border = '1px solid #ccc';
+            }else{
+                confirmasiPassword.style.color = 'red';
+                confirmasiPassword.style.border = '1px solid red';
+            }
+        });
+        //event jika di click pada input confirmasi password jika tidak sama dengan password maka border,color merah
+        confirmasiPassword.addEventListener('click',() => {
+            if(password.value === confirmasiPassword.value){
+                confirmasiPassword.style.color = 'black';
+                confirmasiPassword.style.border = '1px solid #ccc';
+            }else{
+                confirmasiPassword.style.color = 'red';
+                confirmasiPassword.style.border = '1px solid red';
+            }
+        });
+
+    </script>
+>>>>>>> fitur-registrasi
 </body>
 </html>
