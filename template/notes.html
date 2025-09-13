@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="/css/notes.css">
 </head>
 <body>
-        <header>
+    <header>
         <span class="logo">logo</span>
-        <nav class="navigasi-menu">
+        <nav class="navigasi-menu" id="nav-menu">
             <ul class="menu1">
                 <li><a href="/index.html">home</a></li>
                 <li><a href="notes.html">notes</a></li>
                 <li><a href="#">about</a></li>
             </ul>
             <ul class="menu2">
-                <li><a href="template/login.html" target="_blank" class="btn-sign-in">sign in</a></li>
-                <li><a href="template/registrasi.html" target="_blank" class="btn-sign-up">sign up</a></li>
+                <li><a href="/template/login.html" target="_blank" class="btn-sign-in">sign in</a></li>
+                <li><a href="/template/registrasi.html" target="_blank" class="btn-sign-up">sign up</a></li>
             </ul>
         </nav>
+        <div class="hamburgermenu" id="hamburger">
+            &#9776;
+        </div>
     </header>
     <main>
         <h1 class="title">nodes</h1>
@@ -42,5 +45,21 @@
             </div>
         </section>
     </main>
+
+    <!--script-->
+    <script>
+        const btnHamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        btnHamburger.addEventListener('click',() => {
+            navMenu.classList.toggle('active');
+
+            if(navMenu.classList.contains('active')){
+                btnHamburger.innerHTML = '&times;';
+            }else{
+                btnHamburger.innerHTML = '&#9776;';
+            }
+        });
+    </script>
 </body>
 </html>

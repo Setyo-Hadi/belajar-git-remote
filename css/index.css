@@ -1,6 +1,6 @@
 *{
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
@@ -9,13 +9,15 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* HEADER */
 header{
     background-color: rgb(40, 39, 39);
-    color:#ffff;
+    color:#fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding:20px;
+    flex-wrap: wrap;
 }
 
 .logo{
@@ -24,46 +26,111 @@ header{
 
 .navigasi-menu{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:50px;
+    gap:20px;
+    flex-wrap: wrap;
 }
 
-.navigasi-menu .menu1{
+.navigasi-menu ul{
     list-style: none;
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
 }
 
-.navigasi-menu .menu1 li{
-    float: left;
-    padding:12px;
+.navigasi-menu ul li a{
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
 }
 
 .navigasi-menu .menu1 li a{
-    text-decoration: none;
-    color:#fff;
-    font-size: 1.2em;
-}
-
-.navigasi-menu .menu2{
-    list-style: none;
-    display: inline-flex;
-    gap:10px;
-}
-
-.navigasi-menu .menu2 li{
-    float: left;
+    color: #fff;
 }
 
 .navigasi-menu .menu2 li a{
-    text-decoration: none;
-    color:rgb(40, 39, 39);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1em;
-    background-color:#fff;
-    padding: 18px 14px;
-    text-transform: capitalize;
-    border-radius: 3px;
+    background-color: #fff;
+    color: rgb(40, 39, 39);
+}
 
+.hamburgermenu{
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* TITLE */
+.title{
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5em;
+}
+
+/* MEDIA QUERIES */
+
+/* Smartphone */
+@media only screen and (max-width: 600px){
+    .hamburgermenu{
+        display: block;
+        margin-top:20px;
+    }
+    .logo {
+        font-size: 2em;
+    }
+    .navigasi-menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(40, 39, 39);
+        margin-top: 10px;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+
+    .navigasi-menu.active{
+        display: flex; /* tampilkan menu saat aktif */
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 900px){
+    .logo {
+        font-size: 2.5em;
+    }
+    .title{
+        font-size: 2em;
+    }
+    .navigasi-menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(40, 39, 39);
+        margin-top: 10px;
+    }
+    .navigasi-menu.active{
+        display: flex;
+    }
+}
+
+/* Laptop / Desktop */
+@media only screen and (max-width: 1200px){
+    .logo {
+        font-size: 2.8em;
+    }
+    .title{
+        font-size: 2.2em;
+    }
+}
+
+/* Smart TV / Large Screen */
+@media only screen and (min-width: 1600px){
+    .logo {
+        font-size: 4em;
+    }
+    .title{
+        font-size: 3em;
+    }
 }
 
 
